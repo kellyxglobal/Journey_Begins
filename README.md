@@ -15,4 +15,4 @@
 ## - Install mongoose to connect to Mongodb "npm i mongoose"
 ## - Visit mongodb.com to register an account, creating a database and connecting my app to DB using the mongodb DB password string generated. Run "npm run Dev" to test connection.
 ## Creating folders structure for the relevant features - controller, models, routes
-## Creating Models for Data- clicks, impression, and chatRequest in the DB 
+## Creating Models for Data- clicks, impression, and chatRequest in the DB. gigModels.js 
