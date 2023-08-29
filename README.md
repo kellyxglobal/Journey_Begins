@@ -12,3 +12,5 @@
 ## - Accessing the server through webbrowser by declaring a route.
 ## - Downlaoding postman and Insomia for AP testing
 ## - Installing nodemon for running without stopping and running the application over again when a change is being made "npm i nodemone -D"
+## - Install mongoose to connect to Mongodb "npm i mongoose"
+## - Visit mongodb.com to register an account, creating a database and connecting my app to DB using the mongodb DB password string generated
