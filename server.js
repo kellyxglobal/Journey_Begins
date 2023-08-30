@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/blogg', (req, res) => {
-    res.send('Hello my name is Kelechi')
+    res.send('Hello! Welcome to my world')
 })
 
 

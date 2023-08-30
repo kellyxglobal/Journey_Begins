@@ -15,6 +15,10 @@ const gigSchema = mongoose.Schema(
         chatRequest: {
             type: String,
             require: true
+        },
+        chatResponse: {
+            type: String,
+            require: true
         }
         
     }
