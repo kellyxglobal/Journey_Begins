@@ -1,17 +1,32 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const Gig = require('./models/gigModel')
 const app = express()
+//Specifying JSON middleware so that the application can understand JSON data format
+app.use(express.json())
 
-//Accessing the website via the web browser by decalring route
+//Accessing the website via the web browser by decalring routes
 app.get('/', (req, res) => {
     res.send('Welcome to my node websites')
 })
 
 app.get('/blogg', (req, res) => {
-    res.send('Hello! Welcome to my world')
+    res.send('Hello my name is Kelechi')
 })
 
+//A route for saving Models (gigModel.js and orderModel.js) in the database
+app.post('/Gig', async(req, res) => {
+    //console.log(req.body);
+    //res.send(req.body)
+    try {
+        const gig = await Gig.create(req.body)
+        res.status(200).json(gig);
 
+    } catch (error) {
+        console.log(error.messgae);
+        res.status(500).json({message: error.message})
+    }
+})
 
 //Connect to MongoDB
 mongoose.set("strictQuery", false)
