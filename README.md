@@ -17,3 +17,4 @@
 ## Creating folders structure for the relevant features - controller, models, routes
 ## Creating Schemas and Models for Data- clicks, impression, and chatRequest etc in gigModel.js and orderModel.js
 ## Usng the models that I have just created to save data in MongoDB. To do this, I had to create a route in the server.js file for saving the model  (gigModel.js and orderModel.js) in the database
+## Configuring the the server to access my DB credential stored in the .env file below

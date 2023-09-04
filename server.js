@@ -20,7 +20,7 @@ app.post('/Gig', async(req, res) => {
     //res.send(req.body)
     try {
         const gig = await Gig.create(req.body)
-        res.status(200).json(gig);
+        res.status(200).json(gig)
 
     } catch (error) {
         console.log(error.messgae);
@@ -30,7 +30,9 @@ app.post('/Gig', async(req, res) => {
 
 //Connect to MongoDB
 mongoose.set("strictQuery", false)
-mongoose.connect('mongodb+srv://kellyxglobal:Kellxy0303@kellyx.iyxrisn.mongodb.net/?retryWrites=true&w=majority')
+//configuring the the server to access my DB credential stored in the .env file below
+require("dotenv").config();
+mongoose.connect(process.env.DB_CREDENTIAL)
 .then(() => {
     console.log('Connected to MongoDB')
     //Displaying the server page content on the screen via communication protocol
